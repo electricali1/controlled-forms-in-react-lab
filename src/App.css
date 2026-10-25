@@ -1,0 +1,94 @@
+.app-container {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333333;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+h2 {
+  color: #34495e;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 6px;
+  margin-top: 24px;
+}
+
+.warning {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #f87171;
+  font-weight: 500;
+  margin: 12px 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.item-card:hover {
+  background-color: #f1f5f9;
+}
+
+button {
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #3b82f6;
+  color: #ffffff;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.item-card button:last-of-type {
+  background-color: #ef4444;
+}
+
+.items-list .item-card:first-child button {
+  background-color: inherit;
+}
+
+/* Ensure Add to Cart has blue and Remove from Cart has red */
+.item-card button {
+  background-color: #2563eb;
+}
+
+.app-container > .items-list:last-of-type .item-card button {
+  background-color: #dc2626;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
